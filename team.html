@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zenith Solutions, LLC team and professional leadership.">
+  <title>Our Team | Zenith Solutions, LLC</title>
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0A1F44;
+      --blue: #1E4A7A;
+      --blue-light: #2B6A9E;
+      --orange: #E87722;
+      --orange-soft: #F5A623;
+      --white: #FFFFFF;
+      --off-white: #F8FAFC;
+      --gray-light: #E9EEF3;
+      --gray-text: #2C3E50;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.25s ease;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: var(--white);
+      color: var(--gray-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #3a4a5a;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    .kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    .btn-primary:hover {
+      background: #d4661a;
+      border-color: #d4661a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(232, 119, 34, 0.3);
+    }
+
+    /* ---------- TOP BAR ---------- */
+    .topbar {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.85rem;
+      padding: 10px 0;
+      border-bottom: 2px solid var(--orange);
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .top-left {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .top-left span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-right {
+      display: flex;
+      gap: 18px;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .top-right span {
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .top-right span:hover {
+      color: var(--orange);
+    }
+
+    /* ---------- NAVBAR — CIRCULAR LOGO ---------- */
+    .navbar {
+      background: var(--white);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--gray-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo-circle {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .logo-circle a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: var(--white);
+      overflow: hidden;
+      padding: 6px;
+      box-shadow: 0 6px 18px rgba(10, 31, 68, 0.15), 0 0 0 3px var(--white), 0 0 0 5px rgba(232, 119, 34, 0.35);
+      transition: var(--transition);
+      position: relative;
+      margin: -12px 0;
+    }
+
+    .logo-circle a::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--blue) 0%, var(--navy) 100%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .logo-circle a:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 28px rgba(10, 31, 68, 0.25), 0 0 0 3px var(--white), 0 0 0 5px var(--orange);
+    }
+
+    .logo-circle a:hover::before {
+      opacity: 0.05;
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+
+    .menu {
+      display: none;
+      background: none;
+      border: 2px solid var(--gray-light);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--navy);
+      transition: var(--transition);
+    }
+
+    .menu:hover {
+      background: var(--off-white);
+      border-color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.94rem;
+      color: var(--navy);
+      padding: 8px 14px;
+      border-radius: 30px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+      background: rgba(232, 119, 34, 0.08);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 10px 24px;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: #d4661a !important;
+      color: var(--white) !important;
+      box-shadow: 0 6px 18px rgba(232, 119, 34, 0.3);
+    }
+
+    /* Mobile consult button */
+    .mobile-consult {
+      display: none;
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 14px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-bottom: 2px solid #d4661a;
+    }
+
+    .mobile-consult:hover {
+      background: #d4661a;
+    }
+
+    /* ---------- PAGE HERO ---------- */
+    .page-hero {
+      background: linear-gradient(145deg, var(--navy) 0%, var(--blue) 100%);
+      color: var(--white);
+      padding: 70px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(232, 119, 34, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.15rem;
+      max-width: 620px;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .breadcrumb span {
+      color: var(--orange-soft);
+      font-weight: 600;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section.soft {
+      background: var(--off-white);
+    }
+
+    .section-head {
+      margin-bottom: 50px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-head p {
+      font-size: 1.1rem;
+      color: #4a5a6a;
+    }
+
+    /* ---------- REVEAL ANIMATION ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- LEADERSHIP CARD ---------- */
+    .leader-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-light);
+      border-top: 6px solid var(--orange);
+      padding: 44px 42px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .leader-card::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(30, 74, 122, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .leader-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+
+    .leader-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--blue) 0%, var(--navy) 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      box-shadow: 0 15px 35px rgba(10, 31, 68, 0.3), 0 0 0 5px var(--white), 0 0 0 8px rgba(232, 119, 34, 0.3);
+      transition: var(--transition);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .leader-card:hover .leader-avatar {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(10, 31, 68, 0.35), 0 0 0 5px var(--white), 0 0 0 8px var(--orange);
+    }
+
+    .leader-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .leader-content h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .leader-role {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--orange);
+      background: rgba(232, 119, 34, 0.1);
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 14px;
+      letter-spacing: 0.2px;
+    }
+
+    .leader-content p {
+      color: #5a6a7a;
+      font-size: 0.98rem;
+      max-width: 620px;
+    }
+
+    .leader-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .leader-tags span {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      background: var(--off-white);
+      border: 1px solid var(--gray-light);
+      padding: 6px 14px;
+      border-radius: 30px;
+      transition: var(--transition);
+    }
+
+    .leader-tags span:hover {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
+
+    /* ---------- TEAM GRID ---------- */
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--gray-light);
+      border-top: 5px solid var(--blue);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-top-color: var(--orange);
+    }
+
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--blue) 0%, var(--navy) 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 auto 20px;
+      box-shadow: 0 10px 25px rgba(10, 31, 68, 0.25), 0 0 0 4px var(--white), 0 0 0 6px rgba(232, 119, 34, 0.25);
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-avatar {
+      transform: scale(1.08);
+      box-shadow: 0 15px 32px rgba(10, 31, 68, 0.3), 0 0 0 4px var(--white), 0 0 0 6px var(--orange);
+    }
+
+    .team-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+      color: var(--navy);
+    }
+
+    .team-role {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 0;
+    }
+
+    .team-card p {
+      color: #6a7a8a;
+      font-size: 0.92rem;
+      margin-top: 12px;
+    }
+
+    /* ---------- NOTICE ---------- */
+    .notice {
+      background: rgba(30, 74, 122, 0.06);
+      border-left: 4px solid var(--blue);
+      padding: 18px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: #3a4a5a;
+      line-height: 1.5;
+      margin-top: 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .notice-icon {
+      font-size: 1.2rem;
+      color: var(--orange);
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      background: linear-gradient(145deg, var(--blue) 0%, var(--navy) 100%);
+      padding: 60px 50px;
+      border-radius: var(--radius);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+      border-left: 8px solid var(--orange);
+    }
+
+    .cta h2 {
+      color: var(--white);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+      max-width: 600px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.75);
+      padding: 60px 0 20px;
+      border-top: 4px solid var(--orange);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-logo-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--white);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 0 0 4px rgba(232, 119, 34, 0.3);
+      transition: var(--transition);
+    }
+
+    .footer-logo-circle:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.95rem;
+      max-width: 320px;
+    }
+
+    .footer h3 {
+      color: var(--white);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    .footer a {
+      display: block;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .footer a:hover {
+      color: var(--orange);
+      transform: translateX(4px);
+    }
+
+    .copyright {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .copyright span:last-child {
+      color: rgba(255, 255, 255, 0.4);
+      font-style: italic;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .leader-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 32px;
+        gap: 28px;
+      }
+
+      .leader-avatar {
+        margin: 0 auto;
+      }
+
+      .leader-tags {
+        justify-content: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .top-left {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .top-right {
+        justify-content: center;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 0 8px;
+        gap: 4px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 16px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .nav-links .nav-cta {
+        margin-left: 0;
+        margin-top: 6px;
+      }
+
+      .mobile-consult {
+        display: block;
+      }
+
+      .logo-circle a {
+        width: 62px;
+        height: 62px;
+        padding: 5px;
+        margin: -8px 0;
+      }
+
+      .page-hero {
+        padding: 50px 0 40px;
+      }
+
+      .grid3 {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .logo-circle a {
+        width: 52px;
+        height: 52px;
+        padding: 4px;
+        margin: -6px 0;
+      }
+
+      .leader-card {
+        padding: 30px 22px;
+      }
+
+      .leader-avatar {
+        width: 110px;
+        height: 110px;
+        font-size: 2rem;
+      }
+
+      .leader-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .team-card {
+        padding: 32px 22px;
+      }
+
+      .team-avatar {
+        width: 84px;
+        height: 84px;
+        font-size: 1.5rem;
+      }
+
+      .cta {
+        padding: 30px 22px;
+      }
+
+      .footer-logo-circle {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    /* Reduce motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  
+
+/* ===== ZENITH CONSULTATION UPGRADE — ADDITIVE ONLY ===== */
+.zs-consult-overlay{position:fixed;inset:0;background:rgba(6,31,62,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:22px;z-index:9999;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.zs-consult-overlay.is-open{opacity:1;visibility:visible}
+.zs-consult-modal{width:min(960px,100%);max-height:min(90vh,820px);overflow:auto;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(6,31,62,.35);border:1px solid rgba(255,255,255,.45);transform:translateY(18px) scale(.98);transition:transform .28s ease;position:relative}
+.zs-consult-overlay.is-open .zs-consult-modal{transform:none}
+.zs-consult-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:28px 32px 20px;background:linear-gradient(135deg,#061f3e 0%,#0b4d9c 100%);color:#fff}
+.zs-consult-brand{display:flex;align-items:center;gap:14px}.zs-consult-brand img{width:54px;height:54px;object-fit:contain;border-radius:50%;background:#fff;padding:4px}.zs-consult-kicker{display:block;color:#ff9d31;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}.zs-consult-top h2{color:#fff;margin:0;font-size:clamp(26px,4vw,38px)}
+.zs-consult-close{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.2s;flex:0 0 auto}.zs-consult-close:hover{background:#ff8611;transform:rotate(4deg)}
+.zs-consult-body{display:grid;grid-template-columns:.78fr 1.22fr;gap:0}.zs-consult-side{padding:30px;background:#f5f9fe;border-right:1px solid #e1eaf4}.zs-consult-side h3{font-size:20px;margin:0 0 8px;color:#061f3e}.zs-consult-side>p{font-size:14px;color:#526579;line-height:1.65;margin-bottom:22px}.zs-consult-steps{display:grid;gap:13px}.zs-consult-step{display:flex;gap:12px;align-items:flex-start}.zs-consult-step-num{width:30px;height:30px;border-radius:50%;background:#eaf3ff;color:#0b4d9c;display:grid;place-items:center;font-weight:900;font-size:12px;flex:0 0 auto}.zs-consult-step strong{display:block;color:#0b2343;font-size:13px;margin-bottom:2px}.zs-consult-step span{display:block;color:#6a7a8a;font-size:12px;line-height:1.45}.zs-consult-note{margin-top:24px;padding:14px 15px;border-left:4px solid #ff8611;background:#fff7ed;border-radius:9px;color:#5e4b39;font-size:12px;line-height:1.55}
+.zs-consult-form{padding:30px 32px}.zs-consult-form h3{margin:0 0 4px;color:#061f3e;font-size:21px}.zs-consult-form .zs-help{margin:0 0 20px;color:#6a7a8a;font-size:13px}.zs-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.zs-field{display:flex;flex-direction:column;gap:6px}.zs-field.full{grid-column:1/-1}.zs-field label{font-size:12px;font-weight:800;color:#0b2343}.zs-field input,.zs-field select,.zs-field textarea{width:100%;margin:0;padding:12px 13px;border:1px solid #cbd8e7;border-radius:10px;background:#fff;color:#0b2343;font:inherit;outline:none;transition:.2s}.zs-field input:focus,.zs-field select:focus,.zs-field textarea:focus{border-color:#0b4d9c;box-shadow:0 0 0 4px rgba(11,77,156,.08)}.zs-field textarea{min-height:100px;resize:vertical}.zs-required{color:#ff8611}.zs-consult-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:20px;flex-wrap:wrap}.zs-consult-submit{border:0!important;min-width:210px}.zs-consult-privacy{font-size:11px;color:#7a8896;max-width:390px;line-height:1.5}.zs-consult-success{display:none;margin-top:15px;padding:13px 15px;border-left:4px solid #0b4d9c;background:#eef6ff;border-radius:8px;color:#0b2343;font-size:13px;line-height:1.5}.zs-consult-success.show{display:block}
+@media(max-width:760px){.zs-consult-overlay{padding:10px}.zs-consult-modal{max-height:94vh;border-radius:18px}.zs-consult-top{padding:22px 20px 17px}.zs-consult-brand img{width:46px;height:46px}.zs-consult-body{grid-template-columns:1fr}.zs-consult-side{display:none}.zs-consult-form{padding:22px 20px}.zs-form-grid{grid-template-columns:1fr}.zs-field.full{grid-column:auto}.zs-consult-actions{align-items:stretch}.zs-consult-submit{width:100%}.zs-consult-privacy{max-width:none}.zs-consult-close{width:38px;height:38px;font-size:21px}}
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="top-left">
+      <span>⌖ Congo Town, Monrovia, Liberia</span>
+      <span>☎ +231 77 123 4567</span>
+      <span>✉ info@zenithsolutionslr.com</span>
+    </div>
+    <div class="top-right">
+      <span>●</span>
+      <span>in</span>
+      <span>◎</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR WITH CIRCULAR LOGO -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <div class="logo-circle">
+      <a href="index.html" aria-label="Zenith Solutions Home">
+        <img src="assets/zenith-logo.jpg" alt="Zenith Solutions, LLC">
+      </a>
+    </div>
+    <button class="menu" aria-label="Open navigation" id="menuToggle">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="training.html">Training</a>
+      <a href="team.html">Our Team</a>
+      <a href="careers.html">Careers</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="contact.html">Request a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile consult button -->
+<a class="mobile-consult" href="contact.html">Request Consultation →</a>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">Home › <span>Our Team</span></div>
+    <h1>Our Team</h1>
+    <p>Experienced professionals. Practical solutions.</p>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Leadership</span>
+      <h2>Professional leadership.</h2>
+      <p>The supplied company profile identifies a Managing Partner who is a Chartered Certified Accountant and a member of ACCA, LICPA and LITP.</p>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-avatar">MP</div>
+      <div class="leader-content">
+        <h3>Managing Partner</h3>
+        <span class="leader-role">Chartered Certified Accountant</span>
+        <p>Approved biography and professional portrait can be added when provided by Zenith. The Managing Partner leads the firm's multidisciplinary practice and brings deep experience across accounting, tax and advisory services.</p>
+        <div class="leader-tags">
+          <span>ACCA</span>
+          <span>LICPA</span>
+          <span>LITP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice reveal">
+      <span class="notice-icon">◷</span>
+      <span>Approved biographies and professional portraits for the leadership team will be added once provided by Zenith.</span>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM GRID -->
+<section class="section soft">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Our professionals</span>
+      <h2>Multidisciplinary expertise.</h2>
+      <p>Placeholder roles are shown until Zenith provides approved names and photographs.</p>
+    </div>
+    <div class="grid3">
+      <div class="team-card reveal">
+        <div class="team-avatar">TP</div>
+        <h3>Tax Practitioners</h3>
+        <span class="team-role">Tax & Compliance</span>
+        <p>Helping clients navigate tax obligations and regulatory requirements.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">AC</div>
+        <h3>Accountants</h3>
+        <span class="team-role">Accounting & Finance</span>
+        <p>Delivering accurate reporting, analysis and financial insight.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">EN</div>
+        <h3>Engineers</h3>
+        <span class="team-role">Infrastructure Advisory</span>
+        <p>Supporting technical planning and infrastructure projects.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">TF</div>
+        <h3>Trade Finance Professionals</h3>
+        <span class="team-role">Trade & Finance</span>
+        <p>Facilitating trade, brokerage and supply-chain arrangements.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">AS</div>
+        <h3>Advisory Specialists</h3>
+        <span class="team-role">Business & Institutional Advisory</span>
+        <p>Guiding strategy, governance and organizational performance.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">IT</div>
+        <h3>Technology Professionals</h3>
+        <span class="team-role">ICT & Digital Transformation</span>
+        <p>Advising on systems, technology and digital enablement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <h2>Work with our team.</h2>
+        <p>Partner with Zenith Solutions, LLC for practical, reliable and innovative solutions tailored to your needs.</p>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Request a Consultation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-circle">
+          <img src="assets/zenith-logo.jpg" alt="Zenith Solutions, LLC">
+        </div>
+        <p>Multidisciplinary professional services and advisory for businesses, institutions and organizations.</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="team.html">Our Team</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+      </div>
+      <div>
+        <h3>Expertise</h3>
+        <a href="services.html#accounting">Accounting & Tax</a>
+        <a href="services.html#consulting">Business Consultancy</a>
+        <a href="services.html#trade">Trade Facilitation</a>
+        <a href="services.html#technology">Technology Advisory</a>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <a href="training.html">Professional Training</a>
+        <a href="contact.html">Request Consultation</a>
+        <a href="contact.html">Contact Zenith</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© <span data-year></span> Zenith Solutions, LLC. All rights reserved.</span>
+      <span>Professional • Practical • Forward-looking</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Set current year
+  document.querySelectorAll('[data-year]').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      const isOpen = navLinks.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          menuToggle.textContent = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Reveal on scroll
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+
+/* ===== ZENITH CONSULTATION UPGRADE — ADDITIVE ONLY ===== */
+(function(){
+  if(document.getElementById('zsConsultOverlay')) return;
+  const overlay=document.createElement('div');
+  overlay.id='zsConsultOverlay';
+  overlay.className='zs-consult-overlay';
+  overlay.setAttribute('aria-hidden','true');
+  overlay.innerHTML=`
+    <div class="zs-consult-modal" role="dialog" aria-modal="true" aria-labelledby="zsConsultTitle">
+      <div class="zs-consult-top">
+        <div class="zs-consult-brand">
+          <img src="assets/zenith-logo.jpg" alt="Zenith Solutions, LLC">
+          <div><span class="zs-consult-kicker">Start a conversation</span><h2 id="zsConsultTitle">Request a Consultation</h2></div>
+        </div>
+        <button class="zs-consult-close" type="button" aria-label="Close consultation form">×</button>
+      </div>
+      <div class="zs-consult-body">
+        <aside class="zs-consult-side">
+          <h3>Let's understand what you need.</h3>
+          <p>Share a few details and the Zenith Solutions team can review your request and follow up with the right next step.</p>
+          <div class="zs-consult-steps">
+            <div class="zs-consult-step"><div class="zs-consult-step-num">1</div><div><strong>Tell us about your need</strong><span>Select the service area and briefly describe the challenge.</span></div></div>
+            <div class="zs-consult-step"><div class="zs-consult-step-num">2</div><div><strong>Choose your preference</strong><span>Let us know how and when you would prefer to be contacted.</span></div></div>
+            <div class="zs-consult-step"><div class="zs-consult-step-num">3</div><div><strong>We'll follow up</strong><span>Your request can be reviewed before the consultation is arranged.</span></div></div>
+          </div>
+          <div class="zs-consult-note"><strong>Professional & confidential</strong><br>Use this form for business, advisory, training, trade, technology or other professional service inquiries.</div>
+        </aside>
+        <div class="zs-consult-form">
+          <h3>Consultation details</h3><p class="zs-help">Fields marked <span class="zs-required">*</span> are required.</p>
+          <form id="zsConsultForm">
+            <div class="zs-form-grid">
+              <div class="zs-field"><label>Full Name <span class="zs-required">*</span></label><input name="name" required placeholder="Your full name"></div>
+              <div class="zs-field"><label>Company / Organization</label><input name="company" placeholder="Company or organization"></div>
+              <div class="zs-field"><label>Email Address <span class="zs-required">*</span></label><input name="email" type="email" required placeholder="you@company.com"></div>
+              <div class="zs-field"><label>Phone / WhatsApp</label><input name="phone" placeholder="+231 77 000 0000"></div>
+              <div class="zs-field"><label>Service Needed <span class="zs-required">*</span></label><select name="service" required><option value="" selected disabled>Select a service</option><option>Accounting, Tax & Financial Advisory</option><option>Management & Business Consultancy</option><option>Commodity Trade & Logistics</option><option>Engineering / Infrastructure / Technology Advisory</option><option>Research & Institutional Advisory</option><option>Professional Education & Training</option><option>Other / General Consultation</option></select></div>
+              <div class="zs-field"><label>Preferred Contact Method</label><select name="contact_method"><option>Phone call</option><option>WhatsApp</option><option>Email</option><option>In-person meeting</option><option>Video meeting</option></select></div>
+              <div class="zs-field"><label>Preferred Date</label><input name="date" type="date"></div>
+              <div class="zs-field"><label>Preferred Time</label><select name="time"><option>Any time</option><option>8:00 AM – 10:00 AM</option><option>10:00 AM – 12:00 PM</option><option>12:00 PM – 2:00 PM</option><option>2:00 PM – 5:00 PM</option></select></div>
+              <div class="zs-field full"><label>How can Zenith Solutions help? <span class="zs-required">*</span></label><textarea name="message" required placeholder="Briefly tell us about your business need, project, challenge or the support you are looking for..."></textarea></div>
+            </div>
+            <div class="zs-consult-actions"><span class="zs-consult-privacy">By submitting, you are sending a consultation inquiry to Zenith Solutions, LLC. This form is currently a website demo until the official email/backend is connected.</span><button class="btn btn-primary zs-consult-submit" type="submit">Submit Consultation Request →</button></div>
+            <div class="zs-consult-success" id="zsConsultSuccess" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  const closeBtn=overlay.querySelector('.zs-consult-close');
+  const form=overlay.querySelector('#zsConsultForm');
+  const success=overlay.querySelector('#zsConsultSuccess');
+  const firstField=overlay.querySelector('input[name="name"]');
+  function openConsult(){
+    overlay.classList.add('is-open'); overlay.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    success.classList.remove('show'); success.textContent=''; setTimeout(()=>firstField&&firstField.focus(),120);
+  }
+  function closeConsult(){overlay.classList.remove('is-open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow='';}
+  document.addEventListener('click',function(e){
+    const link=e.target.closest('a[href="contact.html"],a[href="./contact.html"]');
+    if(link && /request\s+(a\s+)?consultation/i.test((link.textContent||'').trim())){e.preventDefault();openConsult();}
+  });
+  closeBtn.addEventListener('click',closeConsult);
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeConsult();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('is-open'))closeConsult();});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const data=new FormData(form); const name=data.get('name')||'there';
+    const ref='ZS-'+String(Date.now()).slice(-6);
+    success.innerHTML='<strong>Request received for review.</strong><br>Thank you, '+String(name).replace(/[<>]/g,'')+'. Your consultation reference is <strong>'+ref+'</strong>. Connect the form to Zenith\'s official email/backend before public launch.';
+    success.classList.add('show'); form.reset(); success.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+
+</script>
+
+</body>
+</html>
