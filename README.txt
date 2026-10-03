@@ -1,33 +1,33 @@
-ZENITH SOLUTIONS, LLC — UPGRADED RESPONSIVE WEBSITE
+ZENITH SOLUTIONS, LLC — GITHUB-SAFE WEBSITE
 
-This version upgrades the supplied website while keeping the supplied Zenith logo
-and corporate blue/orange identity.
+This version preserves the existing website design and consultation upgrade.
 
-UPGRADES
-- First-visit welcome screen with Explore Website / Skip Intro
-- Professional business photography in hero, office, training, trade and insights areas
-- Responsive desktop, tablet and phone layouts
-- Mobile navigation
-- Mobile floating consultation button
-- Scroll-reveal animations
-- Improved services, about, team, training, careers, insights and contact pages
-- Stronger calls to action and visual hierarchy
+IMPORTANT FOR GITHUB:
+1. Upload the CONTENTS of this folder directly into your GitHub repository.
+2. Keep index.html in the repository root.
+3. The Zenith logo is intentionally in the repository root as zenith-logo.jpg.
+4. Do not rename zenith-logo.jpg.
+5. The CSS and JavaScript remain in assets/ and must be uploaded too.
 
-RUN
-1. Extract the ZIP.
-2. Open index.html in Chrome/Edge/Firefox.
-3. Internet is recommended because the selected photography and Google Fonts are remote.
+Expected structure:
 
-XAMPP
-Put the extracted folder inside htdocs and open:
-http://localhost/Zenith_Solutions_LLC_Upgraded/
+index.html
+about.html
+services.html
+training.html
+team.html
+careers.html
+insights.html
+contact.html
+zenith-logo.jpg
+assets/
+  style.css
+  script.js
+  photo-sources.txt
 
-BEFORE PUBLIC LAUNCH
-Verify official phone, email, address, team names/photos and social links.
-Connect the contact form to a real PHP/email backend.
+The logo path used by the HTML pages is now simply:
+zenith-logo.jpg
 
-The internal management/database system remains Phase 2.
+This avoids GitHub upload/path problems with the logo while leaving the visual design unchanged.
 
-
-CONSULTATION UPGRADE
-The existing website design was preserved. Request a Consultation links now open an enhanced consultation request panel with service selection, company details, preferred contact method/date/time, project description, and a professional next-steps layout. The form remains demo-only until connected to the official Zenith email/backend.
+The consultation form is front-end only until a backend/email service is connected.
